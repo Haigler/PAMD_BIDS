@@ -1,0 +1,19 @@
+#DEFACNG LEVN ANAT .NII
+
+#FIRST TIME ONLY: Creating Anaconda Defacing Environment
+conda create --name pydeface
+conda activate pydeface
+conda install pip
+cd ~/Levin/Data/Code/DefacingNii/pydeface-master
+pip install pydeface
+
+#The code below will search through the current directory and subdirectories for files ending in 'T1w.nii.gz', execute pydeface on those files, and then remove the appended 'defaced' and replace the original files.
+
+#Navigate to the study\u2019s BIDS folder
+cd ~/Levin/Data/fMRI/Levin_BIDS/
+
+#Apply pydeface to all anatomical images
+find --name '*T1w.nii.gz' --exec pydeface {} \; done
+
+#Remove \u2018_defaced' and replace original file
+for file in *_defaced.nii.gz; do mv "$file" "${file/_defaced.nii.gz/.nii.gz}"; done
