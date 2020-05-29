@@ -1,0 +1,30 @@
+#Creating LEVIN task Jsons
+#Replace ### with the participant number and hit run
+#For the LEVIN project, remember that the original participant numbers do not match our current participant numbers
+#In addition, the task files are a bit messy. If an error gets flagged, it's because an extra fixation cross was shown during the task
+  and the code tjinfant2.m should be used.
+#Participant 3142s task ended early and the last video was not shown. 'NaN' was added to replace the missing value
+
+sub = ###
+run = 01
+inputfile = '###_infant_1.mat'
+outputfile = 'sub-###_task-infant_run-01_events.csv'
+tjinfant
+
+sub = ###
+run = 02
+inputfile = '###_infant_2.mat'
+outputfile = 'sub-###_task-infant_run-02_events.csv'
+tjinfant
+
+sub = ###
+run = 01
+inputfile = '###_affect_1.mat'
+outputfile = 'sub-###_task-affect_run-01_events.csv'
+tjaffect
+
+sub = ###
+run = 02
+inputfile = '###_affect_2.mat'
+outputfile = 'sub-###_task-affect_run-02_events.csv'
+tjaffect
