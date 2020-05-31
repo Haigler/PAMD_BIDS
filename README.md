@@ -8,20 +8,20 @@ The LEVIN dataset includes MRI and psych data from 25 mothers 3 months postpartu
 3. Converting task .m to .tsv: We converted the mat structs to .tsv for each in-scanner task.
 
 4. Assembling metadata:
-    dataset_description.json: Manually created (@haigler)
-    participants.tsv: Manually created from Levin demographic data (@haigler)
-    task-affect_bold.json: Manually created (@haigler)
-    task-infant_bold.json: Manually created (@haigler)
-    levincodebook.tsv: Manually created (@haigler)
-    levindata.tsv: Manually created (@haigler)
-      sub-####.tsv: Automatically created by dicm2nii
-      sub-####_T1w.json: Automatically created by dicm2nii
-      sub-####_magnitud1.json: Automatically created by dicm2nii
-      sub-####_phase1.json: Automatically created by dicm2nii
-      sub-####_task-affect_run-01.json: Automatically created by dicm2nii
-      sub-####_task-affect_run-02.json: Automatically created by dicm2nii
-      sub-####_task-infant_run-01.json: Automatically created by dicm2nii
-      sub-####_task-infant_run-012.json: Automatically created by dicm2nii
+    #dataset_description.json: Manually created (@haigler)
+    #participants.tsv: Manually created from Levin demographic data (@haigler)
+    #task-affect_bold.json: Manually created (@haigler)
+    #task-infant_bold.json: Manually created (@haigler)
+    #levincodebook.tsv: Manually created (@haigler)
+    #levindata.tsv: Manually created (@haigler)
+      #sub-####.tsv: Automatically created by dicm2nii
+      #sub-####_T1w.json: Automatically created by dicm2nii
+      #sub-####_magnitud1.json: Automatically created by dicm2nii
+      #sub-####_phase1.json: Automatically created by dicm2nii
+      #sub-####_task-affect_run-01.json: Automatically created by dicm2nii
+      #sub-####_task-affect_run-02.json: Automatically created by dicm2nii
+      #sub-####_task-infant_run-01.json: Automatically created by dicm2nii
+      #sub-####_task-infant_run-012.json: Automatically created by dicm2nii
 
 5. Defacing .nii: Levin anatomical .nii were defaced with pydeface (https://github.com/poldracklab/pydeface).
 
