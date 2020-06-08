@@ -1,7 +1,7 @@
 # LEVIN_BIDS
 The LEVIN dataset includes MRI and psych data from 25 mothers 3 months postpartum. This repository includes all code and instructions for putting the data in BIDS structure.
 
-1. Deidentifying DICOMS: @Saum1500
+1. Deidentifying DICOMS: Batch Anonymization of the DICOMS using DicomBrowser https://nrg.wustl.edu/software/dicom-browser/
 
 2. Conversion to .nii and BIDS structure: Anonymized DICOMs were converted to .nii and put into BIDS stucture using dicm2nii (https://github.com/xiangruili/dicm2nii).
 
