@@ -15,5 +15,13 @@ cd ~/Levin/Data/fMRI/Levin_BIDS/
 #Apply pydeface to all anatomical images
 find --name '*T1w.nii.gz' --exec pydeface {} \; done
 
-#Remove \u2018_defaced' and replace original file
+#Remove '_defaced' and replace original file
 for file in *_defaced.nii.gz; do mv "$file" "${file/_defaced.nii.gz/.nii.gz}"; done
+
+OR 
+
+#Navigate to the anatomical directory of the subject and unzip the .gz, remove '_defaced', and rezip
+
+gunzip 'sub-####_ses-01_T1w_defaced.nii.gz'
+mv 'sub-####_ses-01_T1w_defaced.nii' 'sub-####_ses-01_T1w.nii'
+gzip 'sub-####_ses-01_T1w.nii'
