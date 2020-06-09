@@ -25,4 +25,6 @@ The LEVIN dataset includes MRI and psych data from 25 mothers 3 months postpartu
 
 5. Defacing .nii: Levin anatomical .nii were defaced with pydeface (https://github.com/poldracklab/pydeface).
 
-6. BIDS Validation: The full Levin dataset was validated using bids-validator (https://github.com/bids-standard/bids-validator).
+6. Cleanup: Correct column order in events.tsv files, rename events.tsv files, move events.tsv files to the subject's func folder, and remove 'defaced' from anat .nii, and clean up participants file
+
+7. BIDS Validation: The full Levin dataset was validated using bids-validator (https://github.com/bids-standard/bids-validator).
