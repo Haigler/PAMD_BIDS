@@ -20,6 +20,8 @@ pydeface 'sub-####_ses-01_T1w.nii.gz'
 #BATCH Apply pydeface to all anatomical images (@Heuristicwondering - this code still needs to be fixed)
 find --name '*T1w.nii.gz' --exec pydeface {} \; done
 
+#Open the defaced files in fsleyes to ensure that they've been successfully defaced and no brain tissues has been erased.
+
 #BATCH Remove '_defaced' and replace original file
 for file in *_defaced.nii.gz; do mv "$file" "${file/_defaced.nii.gz/.nii.gz}"; done
 
