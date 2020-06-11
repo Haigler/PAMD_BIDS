@@ -18,7 +18,7 @@ mv 'sub-####_ses-01_task-affect_run-01_events.tsv' 'sub-####_ses-01_task-affect_
 
 4. Rename deface anat files to comply with BIDS
 ##replace #### with participant #
-cd ~/Levin/Data/fMRI/Levin_BIDS_2/sub-####/ses-01/func
+cd ~/Levin/Data/fMRI/Levin_BIDS_2/sub-####/ses-01/anat
 gunzip 'sub-####_ses-01_T1w_defaced.nii.gz'
 mv 'sub-####_ses-01_T1w_defaced.nii' 'sub-####_ses-01_T1w.nii'
 gzip 'sub-####_ses-01_T1w.nii'
