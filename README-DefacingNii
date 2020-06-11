@@ -9,18 +9,23 @@ pip install pydeface
 
 #The code below will search through the current directory and subdirectories for files ending in 'T1w.nii.gz', execute pydeface on those files, and then remove the appended 'defaced' and replace the original files.
 
-#Navigate to the study\u2019s BIDS folder
-cd ~/Levin/Data/fMRI/Levin_BIDS/
+#Navigate to the study's BIDS folder
+cd ~/Levin/Data/fMRI/Levin_BIDS_2/sub-####/ses-01/anat
 
-#Apply pydeface to all anatomical images
+#Subject by subject apply pydeface
+pydeface 'sub-####_ses-01_T1w.nii.gz'
+
+##OR
+
+#BATCH Apply pydeface to all anatomical images (@Heuristicwondering - this code still needs to be fixed)
 find --name '*T1w.nii.gz' --exec pydeface {} \; done
 
-#Remove '_defaced' and replace original file
+#BATCH Remove '_defaced' and replace original file
 for file in *_defaced.nii.gz; do mv "$file" "${file/_defaced.nii.gz/.nii.gz}"; done
 
 OR 
 
-#Navigate to the anatomical directory of the subject and unzip the .gz, remove '_defaced', and rezip
+#SUBJECT by subject - Navigate to the anatomical directory of the subject and unzip the .gz, remove '_defaced', and rezip
 
 gunzip 'sub-####_ses-01_T1w_defaced.nii.gz'
 mv 'sub-####_ses-01_T1w_defaced.nii' 'sub-####_ses-01_T1w.nii'
