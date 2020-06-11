@@ -31,3 +31,5 @@ dicm2nii
     gre-field_mapping		    fmap		  magnitude1
     gre_field_mapping_phase	fmap		  phase1
     mprage_MGH_p2			      anat			T1w
+
+7. Hit "ok" and let it run.
