@@ -7,6 +7,7 @@ After you have run steps 1-5, the following steps need to be taken to clean up t
 
 2. Rename events.tsv files to include session # and .tsv extension
 ##replace #### with participant #
+  cd ~/Levin/Data/fMRI/Levin_BIDS_2/TaskJson
   mv 'sub-####_task-affect_run-01_events.csv' 'sub-####_ses-01_task-affect_run-01_events.tsv'
   mv 'sub-####_task-affect_run-02_events.csv' 'sub-####_ses-01_task-affect_run-02_events.tsv'
   mv 'sub-####_task-infant_run-01_events.csv' 'sub-####_ses-01_task-infant_run-01_events.tsv'
