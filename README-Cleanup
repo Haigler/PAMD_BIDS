@@ -1,0 +1,27 @@
+#Clean Up BIDS folder
+
+After you have run steps 1-5, the following steps need to be taken to clean up the BIDS folder and correct a few steps.
+
+1. Reorder columns in events.tsv and make all column headers lowercase: onset / duration / subject / run / stimuli
+(@haigler)
+
+2. Rename events.tsv files to include session # and .tsv extension
+##replace #### with participant #
+  cd ~/Levin/Data/fMRI/Levin_BIDS_2/TaskJson
+  mv 'sub-####_task-affect_run-01_events.csv' 'sub-####_ses-01_task-affect_run-01_events.tsv'
+  mv 'sub-####_task-affect_run-02_events.csv' 'sub-####_ses-01_task-affect_run-02_events.tsv'
+  mv 'sub-####_task-infant_run-01_events.csv' 'sub-####_ses-01_task-infant_run-01_events.tsv'
+  mv 'sub-####_task-infant_run-02_events.csv' 'sub-####_ses-01_task-infant_run-02_events.tsv'
+
+3. Move events.tsv to participants' func folders
+##replace #### with participant #
+mv 'sub-####_ses-01_task-affect_run-01_events.tsv' 'sub-####_ses-01_task-affect_run-02_events.tsv' 'sub-####_ses-01_task-infant_run-01_events.tsv' 'sub-####_ses-01_task-infant_run-02_events.tsv' ~/Levin/Data/fMRI/Levin_BIDS_2/sub-####/ses-01/func/
+
+4. Rename deface anat files to comply with BIDS
+##replace #### with participant #
+cd ~/Levin/Data/fMRI/Levin_BIDS_2/sub-####/ses-01/anat
+gunzip 'sub-####_ses-01_T1w_defaced.nii.gz'
+mv 'sub-####_ses-01_T1w_defaced.nii' 'sub-####_ses-01_T1w.nii'
+gzip 'sub-####_ses-01_T1w.nii'
+
+5. Review participants.tsv and erase nonsense data

@@ -1,0 +1,35 @@
+##Convert the raw .dcm files into BIDS-compatible .nii
+
+1. In matlab, run dicm2nii converter
+cd ./Levin/fMRI/dicm2nii-master
+dicm2nii
+
+2. Select the participant's anonymized dicom files ~/Levin/fMRI/AnonomizedDicom/sub-###
+3. Select output directory: ~/Levin/fMRI/Levin_BIDS
+
+4. Check presets:
+      Output format: BIDS
+    Ensure the following are checked:
+      Compress
+      Left-had storage
+      Store PatientName
+      #Use parfor if needed
+      Use SeriesInstanceUID if exists
+      Save json file
+
+5. Click “Start conversion”
+
+6. Check that the following fields are correct:
+  Subject: XXXX (only four characters)
+
+    Name					          Type		  Modality (this will be the output file name)
+
+    ep2d_infant_1				    func			task-infant_run-01_bold
+    ep2d_infant_2				    func			task-infant_run-02_bold
+    ep2d_affect_1				    func			task-affect_run-01_bold
+    ep2d_affect_2				    func			tase-affect_run-02_bold
+    gre-field_mapping		    fmap		  magnitude1
+    gre_field_mapping_phase	fmap		  phase1
+    mprage_MGH_p2			      anat			T1w
+
+7. Hit "ok" and let it run.
