@@ -28,8 +28,8 @@ dicm2nii
     ep2d_infant_2				    func			task-infant_run-02_bold
     ep2d_affect_1				    func			task-affect_run-01_bold
     ep2d_affect_2				    func			tase-affect_run-02_bold
-    gre-field_mapping		    fmap		  magnitude1
-    gre_field_mapping_phase	fmap		  phase1
+    gre-field_mapping		            fmap		      dir-i_epi
+    gre_field_mapping_phase	            fmap		      phasediff
     mprage_MGH_p2			      anat			T1w
 
 7. Hit "ok" and let it run.
