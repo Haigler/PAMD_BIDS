@@ -4,7 +4,7 @@
 # Requires Python module pydeface.
 
 
-dataDir="/mnt/magaj/Levin/Data/fMRI/Levin_BIDS_2/"
+dataDir="~/Levin/Data/PAMD/PAMD_BIDS/"
 currDir=$(pwd)
 
 # deface images
