@@ -30,7 +30,7 @@ Task = [Sub, Run, Names, Onsets, Durations];
 columnNames = {'Subject', 'Run', 'Stimuli', 'Onset', 'Duration'};
 Task = array2table(Task, 'VariableNames',columnNames);
 
-cd('/mnt/magaj/Levin/Data/PAMD/TaskJson');
+cd('/mnt/magaj/Levin/Data/PAMD/TempFolder/TaskJson');
 writetable(Task, outputfile, 'delimiter', '\t');
 
 "file written"
