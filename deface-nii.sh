@@ -4,7 +4,7 @@
 # Requires Python module pydeface.
 
 
-dataDir="~/Levin/Data/PAMD/PAMD_BIDS/"
+dataDir="~/Levin/Data/PAMD/PAMD_BIDS_v.1.0/"
 currDir=$(pwd)
 
 # deface images
