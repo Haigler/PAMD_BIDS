@@ -10,7 +10,7 @@ pip install pydeface
 #SINGLE SUBJECT - Replace #### with participant no.
 
 #Navigate to the study's BIDS folder
-cd ~/Levin/Data/PAMD/PAMD_BIDS/sub-####/ses-01/anat
+cd ~/Levin/Data/PAMD/PAMD_BIDS_v.1.0/sub-####/ses-01/anat
 
 #Subject by subject apply pydeface
 pydeface 'sub-####_ses-01_T1w.nii.gz'
