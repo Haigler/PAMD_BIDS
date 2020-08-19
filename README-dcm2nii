@@ -1,11 +1,11 @@
 ##Convert the raw .dcm files into BIDS-compatible .nii
 
 1. In matlab, run dicm2nii converter
-cd Levin/Data/fMRI/Code/dicm2nii-master
+cd Levin/Data/PAMD/Code/dicm2nii-master
 dicm2nii
 
 2. Select the participant's anonymized dicom files ~/Levin/fMRI/AnonomizedDicom/sub-###
-3. Select output directory: ~/Levin/fMRI/Levin_BIDS
+3. Select output directory: ~/Levin/Data/PAMD/PAMD_BIDS_v.1.0
 
 4. Check presets:
       Output format: BIDS

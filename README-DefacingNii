@@ -1,16 +1,16 @@
-#DEFACNG LEVN ANAT .NII
+#DEFACNG PAMD ANAT .NII
 
 #FIRST TIME ONLY: Creating Anaconda Defacing Environment
 conda create --name pydeface
 conda activate pydeface
 conda install pip
-cd ~/Levin/Data/Code/DefacingNii/pydeface-master
+cd ~/Levin/Data/PAMD/Code/DefacingNii/pydeface-master
 pip install pydeface
 
 #SINGLE SUBJECT - Replace #### with participant no.
 
 #Navigate to the study's BIDS folder
-cd ~/Levin/Data/fMRI/Levin_BIDS_2/sub-####/ses-01/anat
+cd ~/Levin/Data/PAMD/PAMD_BIDS_v.1.0/sub-####/ses-01/anat
 
 #Subject by subject apply pydeface
 pydeface 'sub-####_ses-01_T1w.nii.gz'

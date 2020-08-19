@@ -1,7 +1,7 @@
 rows1 = 30;
 rows2 = 6;
 
-cd('/mnt/magaj/Levin/Data/fMRI/TestFolder');
+cd('/mnt/magaj/Levin/Data/PAMD/TempFolder');
 
 
 load(inputfile);
@@ -28,9 +28,9 @@ Task = [Sub, Run, Names, Onsets, Durations];
 columnNames = {'Subject', 'Run', 'Stimuli', 'Onset', 'Duration'};
 Task = array2table(Task, 'VariableNames',columnNames);
 
-cd('/mnt/magaj/Levin/Data/fMRI/Levin_BIDS_2/TaskJson');
+cd('/mnt/magaj/Levin/Data/PAMD/TempFolder/TaskJson');
 writetable(Task, outputfile, 'delimiter', '\t');
 
 "file written"
 
-cd('/mnt/magaj/Levin/Data/fMRI/Code/CreatingTaskJsons');
+cd('/mnt/magaj/Levin/Data/PAMD/Code/CreatingTaskJsons');
