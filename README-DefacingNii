@@ -8,7 +8,7 @@ cd ~/Levin/Data/PAMD/Code/DefacingNii/pydeface-master
 pip install pydeface
 
 #SINGLE SUBJECT - Replace #### with participant no.
-
+conda activate pydeface
 #Navigate to the study's BIDS folder
 cd ~/Levin/Data/PAMD/PAMD_BIDS_v.1.0/sub-####/ses-01/anat
 
@@ -16,7 +16,7 @@ cd ~/Levin/Data/PAMD/PAMD_BIDS_v.1.0/sub-####/ses-01/anat
 pydeface 'sub-####_ses-01_T1w.nii.gz'
 
 #BATCH ALL SUBJECTS
-
+conda activate pydeface
 #Employ the code in deface-nii.sh
 
 #Open the defaced files in fsleyes to ensure that they've been successfully defaced and no brain tissues has been erased.
